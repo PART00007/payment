@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>otp</h1>
+    <form action="">
+    <input type="text" placeholder="otp" id="otp">
+     <input type="submit" placeholder="" id="sub">
+     </form>
+</body>
+<script>
+  document.querySelector("form").addEventListener("submit",function(){
+    event.preventDefault();
+    var otp=document.querySelector("#otp").value;
+    if(otp==1234){
+           alert("payment successful")
+       }else{
+           alert("invalid otp")
+       }
+   })
+</script>
+</html>

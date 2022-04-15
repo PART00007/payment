@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            height: 300px;
+            justify-content: space-between;
+
+        }
+    </style>
+</head>
+<body>
+       
+       <form >
+        <h1>Enter your payment details</h1>
+        
+                <input type="text" placeholder="First Name" id="Fname">
+                <input type="text" placeholder="Last Name" id="Lname">
+
+            <input type="number" placeholder="Card nuumber" id="CardNumber" >
+            
+            <input type="password" placeholder="Cvv" id="cvv" >
+            
+                    
+            <input type="month" placeholder="Valid upto" id="month">
+                
+            
+            <input type="submit" value="Complete your payment">
+       </form>
+       <script>
+           document.querySelector("form").addEventListener("submit",function(){
+             event.preventDefault();
+             var cardnumber=document.querySelector("#CardNumber").value;
+             var cvv=document.querySelector("#cvv").value;
+             
+              if(cardnumber.length==16 && cvv.length==3 ){
+                  
+                  window.location.href="otp.html"
+                 
+              }else{
+                  alert("error")
+              }
+           });
+       </script>
+</body>
+</html>
